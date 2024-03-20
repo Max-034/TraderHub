@@ -1,6 +1,8 @@
 import express from "express";
 var router = express.Router();
 import {OAuth2Client} from "google-auth-library";
+import dotenv from "dotenv";
+dotenv.config();
 
 
 router.post('/' , async function(req,res,next){
@@ -9,8 +11,8 @@ router.post('/' , async function(req,res,next){
 
     const redirectUrl = 'http://localhost:8000/auth/google/redirect';
     const oAuth2Client = new OAuth2Client(
-        '270355355302-lvkv43psvih9pp5mqg70fi2butmj5d81.apps.googleusercontent.com',
-        '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',
+        process.env.CLIENT_ID,
+        process.env.CLIENT_SECRET,
         redirectUrl ,
 
     );

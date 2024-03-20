@@ -1,12 +1,13 @@
 import express from "express";
 const app = express();
 const port = 8000;
+import dotenv from "dotenv";
+dotenv.config();
 
-// routes/oauth.mjs
+
 import authRouter from './routes/oauth.js';
 
 
-// routes/request.mjs
 import requestRouter from './routes/request.js';
 
 

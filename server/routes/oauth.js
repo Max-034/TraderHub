@@ -1,6 +1,8 @@
 import express from "express";
 var router = express.Router();
 import {OAuth2Client} from "google-auth-library";
+import dotenv from "dotenv";
+dotenv.config();
 
 async function getUserData(access_token){
     const response = await fetch('https://www.googleapis.com/oauth2/v3/userinfo?access_token${access_token}');
@@ -13,8 +15,8 @@ router.get('/' , async function(req,res,next){
     try{
         const redirectUrl = 'http://localhost:8000/auth/google/redirect';
         const oAuth2Client = new OAuth2Client(
-            '270355355302-lvkv43psvih9pp5mqg70fi2butmj5d81.apps.googleusercontent.com',
-        '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',
+            process.env.CLIENT_ID,
+        process.env.CLIENT_SECRET,
         redirectUrl ,
 
         );
