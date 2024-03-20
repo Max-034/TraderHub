@@ -3,9 +3,9 @@
 import googleButton from '/btn_google_signin_dark_pressed_web.png'
 import '/App.css'
 
-// function navigate(url){
-//   window.location.href = url;
-// }
+function navigate(url: string){
+  window.location.href = url;
+}
 
 async function auth(){
   const response =await fetch('http://localhost:8000/request',{method:'post'});
