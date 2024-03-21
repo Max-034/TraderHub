@@ -8,7 +8,7 @@ function navigate(url: string){
 }
 
 async function auth(){
-  const response =await fetch('http://localhost:8000/request',{method:'post'});
+  const response =await fetch('https://traderhub-1.onrender.com/request',{method:'post'});
 
   const data = await response.json();
   console.log(data);
