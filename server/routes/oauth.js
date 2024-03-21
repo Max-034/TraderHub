@@ -13,7 +13,7 @@ async function getUserData(access_token){
 router.get('/' , async function(req,res,next){
     const code = req.query.code;
     try{
-        const redirectUrl = 'http://localhost:8000/auth/google/redirect';
+        const redirectUrl = 'https://traderhub-1.onrender.com/auth/google/redirect';
         const oAuth2Client = new OAuth2Client(
             process.env.CLIENT_ID,
         process.env.CLIENT_SECRET,
@@ -25,7 +25,7 @@ router.get('/' , async function(req,res,next){
         console.log('token acquired');
         // const user = oAuth2Client.credentials;
         // await getUserData(user.access_token);
-        res.redirect("http://localhost:3000/dashboard");
+        res.redirect("https://trader-hub-mn95-c9ufdnpdo-max-034s-projects.vercel.app/dashboard");
         
         
     }catch(err){
