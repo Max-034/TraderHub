@@ -6,7 +6,7 @@ dotenv.config();
 
 
 router.post('/' , async function(req,res,next){
-    res.header('Access-Control-Allow-Origin' , 'https://trader-hub-mn95-c9ufdnpdo-max-034s-projects.vercel.app');
+    res.header('Access-Control-Allow-Origin' , 'https://trader-hub-8nlr.vercel.app');
     res.header('Referrer-Policy' , 'no-referrer-when-downgrade');
 
     const redirectUrl = 'https://traderhub-1.onrender.com/auth/google/redirect';
