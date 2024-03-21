@@ -25,7 +25,7 @@ router.get('/' , async function(req,res,next){
         console.log('token acquired');
         // const user = oAuth2Client.credentials;
         // await getUserData(user.access_token);
-        res.redirect("https://trader-hub-mn95-c9ufdnpdo-max-034s-projects.vercel.app/dashboard");
+        res.redirect("https://trader-hub-8nlr.vercel.app/dashboard");
         
         
     }catch(err){
